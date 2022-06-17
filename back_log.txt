@@ -1,0 +1,20 @@
+[33m[nodemon] 2.0.2[39m
+[33m[nodemon] to restart at any time, enter `rs`[39m
+[33m[nodemon] watching dir(s): *.*[39m
+[33m[nodemon] watching extensions: js,mjs,json[39m
+[32m[nodemon] starting `node app.js`[39m
+{ user: 'seoseo',
+  password: 'seo1282',
+  host: 'localhost',
+  database: 'mydb' }
+Example app listening on port 3031
+/home/westkitedev/myGitRepos/oneDropInk/seo_back
+[0mPOST /api/board/getAllPostsList [32m200 [0m33.147 ms - 735[0m
+success Query Selecting 
+[0mPOST /api/board/getTagForWordCloud [32m200 [0m97.762 ms - 45[0m
+[0mPOST /api/board/getAllPostsList [32m200 [0m3.968 ms - 735[0m
+success Query Selecting 
+[0mPOST /api/board/getTagForWordCloud [32m200 [0m5.901 ms - 45[0m
+[0mPOST /api/board/getAllPostsList [32m200 [0m3.302 ms - 735[0m
+success Query Selecting 
+[0mPOST /api/board/getTagForWordCloud [32m200 [0m3.951 ms - 45[0m

