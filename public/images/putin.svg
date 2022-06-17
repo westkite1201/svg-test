@@ -1847,7 +1847,7 @@
     </g>
       <foreignObject x="0" y="0" width="0" height="0">
         <body xmlns="http://www.w3.org/1999/xhtml">
-            <iframe src="http://localhost:3032" style="width:700px;height:700px"></iframe>
+            <iframe src="http://15.164.129.242:3032" style="width:700px;height:700px"></iframe>
         </body>
       </foreignObject>
 </svg>
